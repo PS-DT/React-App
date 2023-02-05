@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
 
 function App() {
 
@@ -11,16 +13,20 @@ function App() {
     <>
       <div className="container">
         <div>
-          {Banner()}
+          <Header />
         </div>
         <div>
-          <StaffMember />
+          {Banner()}
+        </div>
+        <div >
+          <NavControl />
         </div>
       </div>
 
     </>
   );
 }
+
 
 function Banner() {
   return (
@@ -59,6 +65,37 @@ function Banner() {
     </>
   );
 }
+function NavControl() {
+  return (
+    <Tabs
+      defaultActiveKey="profile"
+      id="uncontrolled-tab-example"
+      className="mb-3"
+    >
+      <Tab eventKey="Service" title="Service">
+        <Service/>
+      </Tab>
+      <Tab eventKey="Staff" title="Staff">
+      <StaffMember/>
+      </Tab>
+    </Tabs>
+  );
+}
+
+function Header() {
+  return (
+    <div className="header">
+      <div></div>
+      <div >
+        <img className="logoGoogle" src="https://play-lh.googleusercontent.com/6UgEjh8Xuts4nwdWzTnWH8QtLuHqRMUB7dp24JYVE2xcYzq4HA8hFfcAbU-R-PC_9uA1"></img>
+      </div>
+      <div>
+
+        <input placeholder="search"></input>
+      </div>
+    </div>
+  )
+}
 
 
 function StaffMember() {
@@ -73,5 +110,9 @@ function StaffMember() {
       </div>
     </div>
   );
+}
+
+function Service(){
+  return <h1>Tung working here</h1>
 }
 export default App;
