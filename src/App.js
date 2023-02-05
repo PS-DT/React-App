@@ -16,10 +16,9 @@ function App() {
           {team.map((member) => (
             <Name member={member} />
           ))}
-
-          {Banner()}
         </ul>
       </div>
+      {Banner()}
     </>
   );
 }
