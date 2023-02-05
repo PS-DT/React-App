@@ -1,24 +1,43 @@
 
 import "./App.css";
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
 
 function App() {
-  const team = [{ name: "Loc" }, { name: "Tung" }, { name: "Tay" }];
   return (
     <>
       <div>
         <Header />
       </div>
       <div className="App">
-        <h1>Hello Team</h1>
+        <UncontrolledExample/>
+      </div>
+    </>
+  );
+}
+
+function UncontrolledExample() {
+  const team = [{ name: "Loc" }, { name: "Tung" }, { name: "Tay" }];
+  return (
+    <Tabs
+      defaultActiveKey="profile"
+      id="uncontrolled-tab-example"
+      className="mb-3"
+    >
+      <Tab eventKey="home" title="Home">
         <ul>
           {team.map((member) => (
             <Name member={member} />
           ))}
         </ul>
-      </div>
-    </>
+      </Tab>
+      <Tab eventKey="profile" title="Profile">
+        <p>Hello</p>
+      </Tab>
+    </Tabs>
   );
 }
+
 
 function Name({ member }) {
   return <li>{member.name}</li>;
