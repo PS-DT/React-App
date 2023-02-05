@@ -5,27 +5,21 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-
 function App() {
-  const team = [{ name: "Loc" }, { name: "Tung" }, { name: "Tay" }];
+
   return (
     <>
-      <div className="App">
-        <h1>Hello Team</h1>
-        <ul>
-          {team.map((member) => (
-            <Name member={member} />
-          ))}
-
+      <div className="container">
+        <div>
           {Banner()}
-        </ul>
+        </div>
+        <div>
+          <StaffMember />
+        </div>
       </div>
+
     </>
   );
-}
-
-function Name({ member }) {
-  return <li>{member.name}</li>;
 }
 
 function Banner() {
@@ -66,4 +60,18 @@ function Banner() {
   );
 }
 
+
+function StaffMember() {
+  return (
+    <div className="staff-card">
+      <div>
+        <h1>Member Name</h1>
+        <p><a href="#" className="lik_bookme">Book me</a></p>
+      </div>
+      <div>
+        <img alt="staffimage" className="image-staff" src="https://us.123rf.com/450wm/praewpailin/praewpailin2009/praewpailin200900539/praewpailin200900539.jpg?ver=6g"></img>
+      </div>
+    </div>
+  );
+}
 export default App;
