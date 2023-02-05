@@ -4,10 +4,11 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
 
 function App() {
-  const team = [{ name: "Loc" }, { name: "Tung" }, { name: "Tay" }];
+
   return (
     <>
       <div className="App">
@@ -16,16 +17,15 @@ function App() {
           {team.map((member) => (
             <Name member={member} />
           ))}
+
+          {Banner()}
         </ul>
       </div>
-      {Banner()}
+
     </>
   );
 }
 
-function Name({ member }) {
-  return <li>{member.name}</li>;
-}
 
 function Banner() {
   return (
@@ -64,5 +64,54 @@ function Banner() {
     </>
   );
 }
+function NavControl() {
+  return (
+    <Tabs
+      defaultActiveKey="profile"
+      id="uncontrolled-tab-example"
+      className="mb-3"
+    >
+      <Tab eventKey="Service" title="Service">
+        <Service/>
+      </Tab>
+      <Tab eventKey="Staff" title="Staff">
+      <StaffMember/>
+      </Tab>
+    </Tabs>
+  );
+}
 
+function Header() {
+  return (
+    <div className="header">
+      <div></div>
+      <div >
+        <img className="logoGoogle" src="https://play-lh.googleusercontent.com/6UgEjh8Xuts4nwdWzTnWH8QtLuHqRMUB7dp24JYVE2xcYzq4HA8hFfcAbU-R-PC_9uA1"></img>
+      </div>
+      <div>
+
+        <input placeholder="search"></input>
+      </div>
+    </div>
+  )
+}
+
+
+function StaffMember() {
+  return (
+    <div className="staff-card">
+      <div>
+        <h1>Member Name</h1>
+        <p><a href="#" className="lik_bookme">Book me</a></p>
+      </div>
+      <div>
+        <img alt="staffimage" className="image-staff" src="https://us.123rf.com/450wm/praewpailin/praewpailin2009/praewpailin200900539/praewpailin200900539.jpg?ver=6g"></img>
+      </div>
+    </div>
+  );
+}
+
+function Service(){
+  return <h1>Tung working here</h1>
+}
 export default App;
