@@ -87,7 +87,7 @@ function Header() {
     <div className="header">
       <div></div>
       <div >
-        <img className="logoGoogle" src="https://play-lh.googleusercontent.com/6UgEjh8Xuts4nwdWzTnWH8QtLuHqRMUB7dp24JYVE2xcYzq4HA8hFfcAbU-R-PC_9uA1"></img>
+        <img alt="logoName" className="logoGoogle" src="https://play-lh.googleusercontent.com/6UgEjh8Xuts4nwdWzTnWH8QtLuHqRMUB7dp24JYVE2xcYzq4HA8hFfcAbU-R-PC_9uA1"></img>
       </div>
       <div>
 
@@ -103,7 +103,9 @@ function StaffMember() {
     <div className="staff-card">
       <div>
         <h1>Member Name</h1>
-        <p><a href="#" className="lik_bookme">Book me</a></p>
+        <p>
+          <button href="#" className="lik_bookme">Book me</button>
+        </p>
       </div>
       <div>
         <img alt="staffimage" className="image-staff" src="https://us.123rf.com/450wm/praewpailin/praewpailin2009/praewpailin200900539/praewpailin200900539.jpg?ver=6g"></img>

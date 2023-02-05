@@ -20,6 +20,7 @@ code {
 }
 .logoGoogle{
   width: 60px;
+
 }
 
 
@@ -35,7 +36,8 @@ code {
 }
 
 .lik_bookme{
-  text-decoration: none;
+  text-decoration: underline;
+  border: none;
 }
 p{
   margin-top: 40px;
