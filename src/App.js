@@ -87,7 +87,7 @@ function Header() {
     <div className="header">
       <div></div>
       <div >
-        <img alt="logoName" className="logoGoogle" src="https://play-lh.googleusercontent.com/6UgEjh8Xuts4nwdWzTnWH8QtLuHqRMUB7dp24JYVE2xcYzq4HA8hFfcAbU-R-PC_9uA1"></img>
+        {/* <img alt="logoName" className="logoGoogle" src="https://play-lh.googleusercontent.com/6UgEjh8Xuts4nwdWzTnWH8QtLuHqRMUB7dp24JYVE2xcYzq4HA8hFfcAbU-R-PC_9uA1"></img> */}
       </div>
       <div>
 
