@@ -104,7 +104,7 @@ function StaffMember() {
       <div>
         <h1>Member Name</h1>
         <p>
-          <button href="#" className="lik_bookme">Book me</button>
+          <button className="lik_bookme">Book me</button>
         </p>
       </div>
       <div>
