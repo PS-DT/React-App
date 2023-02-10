@@ -1,9 +1,6 @@
 
 import "./App.css";
 import 'bootstrap/dist/css/bootstrap.css';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 
@@ -66,7 +63,7 @@ function Banner() {
 }
 
 function NavControl() {
-  const team =[{ name: "Loc" }, { name: "Tung" }, { name: "Tay" }]
+  const team = [{ name: "Loc" }, { name: "Tung" }, { name: "Tay" }]
   return (
     <Tabs
       defaultActiveKey="Service"
@@ -76,7 +73,7 @@ function NavControl() {
         <Service />
       </Tab>
       <Tab eventKey="Staff" title="Staff">
-        {team.map((member,index)=>(
+        {team.map((member, index) => (
           <StaffMember key={index} member={member} />
         ))}
       </Tab>
@@ -99,7 +96,7 @@ function Header() {
 }
 
 
-function StaffMember({member}) {
+function StaffMember({ member }) {
   return (
     <div className="staff-card">
       <div>
