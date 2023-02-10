@@ -11,15 +11,16 @@ function App() {
 
   return (
     <>
-      <div className="App">
-        <h1>Hello Team</h1>
-        <ul>
-          {team.map((member) => (
-            <Name member={member} />
-          ))}
-
+      <div className="container">
+        <div>
+          <Header />
+        </div>
+        <div>
           {Banner()}
-        </ul>
+        </div>
+        <div >
+          <NavControl />
+        </div>
       </div>
 
     </>
@@ -41,7 +42,7 @@ function Banner() {
 
       </ThemeProvider> */}
 
-      <Container>
+      <Container className="banner">
         {/* <Row>
         <Col>1 of 3</Col>
         <Col xs={6}>2 of 3 (wider)</Col>
@@ -58,12 +59,19 @@ function Banner() {
             </p>
             <p> At Min's Lash & Fibroblasts, we don’t strict the beauty in the same way. We prefer to bring out the best version of you instead. </p>
           </Col>
-          <Col xs={4}>2 of 3 (wider)</Col>
+          <Col xs={4}>
+            <div className = "banner-button">
+              <button className = "book">Book</button>
+              <br></br>
+              <button className = "bookings">My bookings</button>
+            </div>
+          </Col>
         </Row>
       </Container>
     </>
   );
 }
+
 function NavControl() {
   return (
     <Tabs
@@ -72,10 +80,10 @@ function NavControl() {
       className="mb-3"
     >
       <Tab eventKey="Service" title="Service">
-        <Service/>
+        <Service />
       </Tab>
       <Tab eventKey="Staff" title="Staff">
-      <StaffMember/>
+        <StaffMember />
       </Tab>
     </Tabs>
   );
@@ -86,7 +94,7 @@ function Header() {
     <div className="header">
       <div></div>
       <div >
-        <img className="logoGoogle" src="https://play-lh.googleusercontent.com/6UgEjh8Xuts4nwdWzTnWH8QtLuHqRMUB7dp24JYVE2xcYzq4HA8hFfcAbU-R-PC_9uA1"></img>
+        <img className="logoMin" src="https://minpermanentbeauty.square.site/uploads/b/37786891d35eae97e0b4ced04b8dd6b701551979da9561e0b5e1de51b7f6ffee/New%20Logo%20Black%20Version%20(6)_1668575325.png?width=400"></img>
       </div>
       <div>
 
@@ -111,7 +119,7 @@ function StaffMember() {
   );
 }
 
-function Service(){
+function Service() {
   return <h1>Tung working here</h1>
 }
 export default App;

@@ -18,10 +18,35 @@ code {
   flex-direction: row;
   justify-content: space-around;
 }
-.logoGoogle{
+.logoMin{
   width: 60px;
 }
 
+.banner{
+  padding-top: 10px 10px 10px 10px; 
+  margin: 0px auto;
+  
+}
+.banner-button{
+  margin: 0px auto;
+  position: relative;
+ 
+  /* -ms-transform: translateY(-20%); */
+  transform: translateY(10%);
+}
+.book{
+  background-color: black;
+  margin: 0px auto;
+  color: white;
+  padding: 1rem 7rem 1rem 7rem;
+}
+
+.bookings{
+  background-color: white;
+  margin: 0px auto;
+  color: black;
+  padding: 1rem 6rem 1rem 6rem;
+}
 
 .staff-card{
   display: flex;
