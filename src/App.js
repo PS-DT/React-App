@@ -66,17 +66,19 @@ function Banner() {
 }
 
 function NavControl() {
+  const team =[{ name: "Loc" }, { name: "Tung" }, { name: "Tay" }]
   return (
     <Tabs
-      defaultActiveKey="profile"
-      id="uncontrolled-tab-example"
+      defaultActiveKey="Service"
       className="mb-3"
     >
       <Tab eventKey="Service" title="Service">
         <Service />
       </Tab>
       <Tab eventKey="Staff" title="Staff">
-        <StaffMember />
+        {team.map((member,index)=>(
+          <StaffMember key={index} member={member} />
+        ))}
       </Tab>
     </Tabs>
   );
@@ -90,7 +92,6 @@ function Header() {
         <img className="logoMin" src="https://minpermanentbeauty.square.site/uploads/b/37786891d35eae97e0b4ced04b8dd6b701551979da9561e0b5e1de51b7f6ffee/New%20Logo%20Black%20Version%20(6)_1668575325.png?width=400"></img>
       </div>
       <div>
-
         <input placeholder="search"></input>
       </div>
     </div>
@@ -98,12 +99,14 @@ function Header() {
 }
 
 
-function StaffMember() {
+function StaffMember({member}) {
   return (
     <div className="staff-card">
       <div>
-        <h1>Member Name</h1>
-        <p><a href="#" className="lik_bookme">Book me</a></p>
+        <h1>{member?.name}</h1>
+        <p>
+          <button className="lik_bookme">Book me</button>
+        </p>
       </div>
       <div>
         <img alt="staffimage" className="image-staff" src="https://us.123rf.com/450wm/praewpailin/praewpailin2009/praewpailin200900539/praewpailin200900539.jpg?ver=6g"></img>
