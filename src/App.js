@@ -42,32 +42,25 @@ function Banner() {
 
       </ThemeProvider> */}
 
-      <Container className="banner">
-        {/* <Row>
-        <Col>1 of 3</Col>
-        <Col xs={6}>2 of 3 (wider)</Col>
+      <div className="d-flex banner">
 
-      </Row> */}
-        <Row>
-          <Col>
-            <p><b>Min's Lash & Fibroblasts</b></p>
-            <p>
-              Open until 7:00 pm
-              •<a href="tel: +1 346-204-2210" >  1 346-204-2210</a>
-              •<a href="%202beautieslash@gmail.com" >  +  2beautieslash@gmail.com</a>
+        <div className="p-5 flex-fill align-self-center">
+          <p><b>Min's Lash & Fibroblasts</b></p>
+          <p>
+            Open until 7:00 pm
+            •<a href="tel: +1 346-204-2210" >  1 346-204-2210</a>
+            •<a href="%202beautieslash@gmail.com" >  +2beautieslash@gmail.com</a>
 
-            </p>
-            <p> At Min's Lash & Fibroblasts, we don’t strict the beauty in the same way. We prefer to bring out the best version of you instead. </p>
-          </Col>
-          <Col xs={4}>
-            <div className = "banner-button">
-              <button className = "book">Book</button>
-              <br></br>
-              <button className = "bookings">My bookings</button>
-            </div>
-          </Col>
-        </Row>
-      </Container>
+          </p>
+          <p> At Min's Lash & Fibroblasts, we don’t strict the beauty in the same way. We prefer to bring out the best version of you instead. </p>
+        </div>
+        <div className="p-1 flex-fill align-self-center">
+          <button className="book">Book</button>
+          <br></br>
+          <button className="bookings">My bookings</button>
+        </div>
+      </div>
+
     </>
   );
 }

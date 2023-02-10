@@ -23,29 +23,31 @@ code {
 }
 
 .banner{
-  padding-top: 10px 10px 10px 10px; 
-  margin: 0px auto;
-  
+  padding-top: 5%;
 }
 .banner-button{
-  margin: 0px auto;
-  position: relative;
- 
-  /* -ms-transform: translateY(-20%); */
-  transform: translateY(10%);
+  text-align: center;
+  display: inline-block;
+  height: 100%; 
+  vertical-align: middle;
 }
+
 .book{
   background-color: black;
-  margin: 0px auto;
+  margin-bottom: 2px;
   color: white;
-  padding: 1rem 7rem 1rem 7rem;
+  width: 240px;
+  padding: 10px;
+  font-size: 18px;
 }
 
 .bookings{
   background-color: white;
-  margin: 0px auto;
+  margin-top: 2px;
   color: black;
-  padding: 1rem 6rem 1rem 6rem;
+  width: 240px;
+  padding: 10px;
+  font-size: 18px;
 }
 
 .staff-card{
