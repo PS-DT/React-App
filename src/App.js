@@ -113,6 +113,17 @@ function StaffMember({ member }) {
 }
 
 function Service() {
-  return <h1>Tung working here</h1>
+  return (
+    <div class="service-card">
+      <div> 
+        <span style={{ fontWeight: 'bold' }}>Service Name </span>
+        <p><a href="#" className="service_button">Book me</a></p>
+      </div>
+      <div>
+        <text  className="price_time"> $45.00 . 55 mins</text>
+      </div>
+
+    </div>
+  );
 }
 export default App;
