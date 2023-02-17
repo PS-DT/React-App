@@ -84,12 +84,8 @@ function NavControl() {
 function Header() {
   return (
     <div className="header">
-      <div></div>
       <div >
         <img className="logoMin" src="https://minpermanentbeauty.square.site/uploads/b/37786891d35eae97e0b4ced04b8dd6b701551979da9561e0b5e1de51b7f6ffee/New%20Logo%20Black%20Version%20(6)_1668575325.png?width=400"></img>
-      </div>
-      <div>
-        <input placeholder="search"></input>
       </div>
     </div>
   )
