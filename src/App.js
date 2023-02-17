@@ -66,7 +66,7 @@ function NavControl() {
   const team = [{ name: "Loc" }, { name: "Tung" }, { name: "Tay" }]
   return (
     <Tabs
-      defaultActiveKey="Service"
+      defaultActiveKey="Staff"
       className="mb-3"
     >
       <Tab eventKey="Service" title="Service">
@@ -94,10 +94,10 @@ function Header() {
 
 function StaffMember({ member }) {
   return (
-    <div className="staff-card">
-      <div>
-        <h1>{member?.name}</h1>
-        <p>
+    <div className="d-flex justify-content-between staff-card">
+      <div className="d-flex align-items-start flex-column">
+        <h1 className="mb-auto p-3">{member?.name}</h1>
+        <p className="mb-auto p-3">
           <button className="lik_bookme">Book me</button>
         </p>
       </div>
@@ -110,13 +110,13 @@ function StaffMember({ member }) {
 
 function Service() {
   return (
-    <div class="service-card">
+    <div className="service-card">
       <div> 
         <span style={{ fontWeight: 'bold' }}>Service Name </span>
         <p><a href="#" className="service_button">Book me</a></p>
       </div>
       <div>
-        <text  className="price_time"> $45.00 . 55 mins</text>
+        <p  className="price_time"> $45.00 . 55 mins</p>
       </div>
 
     </div>
