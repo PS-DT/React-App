@@ -94,14 +94,14 @@ function Header() {
 
 function StaffMember({ member }) {
   return (
-    <div className="d-flex justify-content-between staff-card">
+    <div className="d-flex justify-content-between align-self-center staff-card">
       <div className="d-flex align-items-start flex-column">
         <h1 className="mb-auto p-3">{member?.name}</h1>
         <p className="mb-auto p-3">
           <button className="lik_bookme">Book me</button>
         </p>
       </div>
-      <div>
+      <div className="d-flex align-items-center">
         <img alt="staffimage" className="image-staff" src="https://us.123rf.com/450wm/praewpailin/praewpailin2009/praewpailin200900539/praewpailin200900539.jpg?ver=6g"></img>
       </div>
     </div>
