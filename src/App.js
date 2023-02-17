@@ -3,7 +3,7 @@ import "./App.css";
 import 'bootstrap/dist/css/bootstrap.css';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-
+import Alert from 'react-bootstrap/Alert';
 function App() {
 
   return (
@@ -11,6 +11,11 @@ function App() {
       <div className="container">
         <div>
           <Header />
+        </div>
+        <div>
+        <Alert variant="dark">
+          This is a addres of store
+        </Alert>
         </div>
         <div>
           {Banner()}
