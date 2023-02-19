@@ -28,39 +28,29 @@ function App() {
 function Banner() {
   return (
     <>
-
-      {/* <div className="App">
-      </div> */}
-
-      {/* <ThemeProvider
-        breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}
-        minBreakpoint="xxs"
-      >
-
-      </ThemeProvider> */}
-
-      <div className="d-flex banner">
-
-        <div className="p-5 flex-fill align-self-center">
+      <div className="d-flex banner justify-content-between flex-sm-nowrap flex-wrap">
+        <div className="">
           <p><b>Min's Lash & Fibroblasts</b></p>
           <p>
             Open until 7:00 pm
             •<a href="tel: +1 346-204-2210" >  1 346-204-2210</a>
             •<a href="%202beautieslash@gmail.com" >  +2beautieslash@gmail.com</a>
-
           </p>
           <p> At Min's Lash & Fibroblasts, we don’t strict the beauty in the same way. We prefer to bring out the best version of you instead. </p>
         </div>
-        <div className="p-1 flex-fill align-self-center">
-          <button className="book">Book</button>
-          <br></br>
-          <button className="bookings">My bookings</button>
+        <div className="banner-button">
+          <div>
+            <button className="book">Book</button>
+            <br></br>
+            <button className="bookings">My bookings</button></div>
         </div>
       </div>
-
     </>
   );
 }
+
+
+
 
 function NavControl() {
   const team = [{ name: "Loc" }, { name: "Tung" }, { name: "Tay" }]
@@ -112,6 +102,7 @@ function Service() {
   return (
     <div className="service-card">
       <div> 
+
         <span style={{ fontWeight: 'bold' }}>Service Name </span>
         <p><a href="#" className="service_button">Book me</a></p>
       </div>
