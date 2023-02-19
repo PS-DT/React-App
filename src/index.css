@@ -25,11 +25,18 @@ code {
 .banner{
   padding-top: 5%;
 }
+
 .banner-button{
   text-align: center;
   display: inline-block;
   height: 100%; 
   vertical-align: middle;
+  margin-left: 5%;
+}
+
+.statement.p{
+  font-size: 1rem;
+  padding-right: -10px;
 }
 
 .book{
