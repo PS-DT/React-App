@@ -113,13 +113,14 @@ function Service() {
     <div className="service-card">
       <div> 
         <span style={{ fontWeight: 'bold' }}>Service Name </span>
-        <p><a href="#" className="service_button">Book me</a></p>
       </div>
-      <div>
-        <p  className="price_time"> $45.00 . 55 mins</p>
+        <div className="price_time">
+            <p> $45.00 * 55 mins </p>
+        </div>
+        <div>
+          <p><a href="#" className="service_button">Book me</a></p>
+        </div>
       </div>
-
-    </div>
   );
 }
 export default App;
