@@ -15,20 +15,20 @@
 
 .service-card{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
   border: 1px solid black;
   padding: 20px;
 }
+
 .service_button {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  
 }
 
+
 .price_time {
-  margin-right: auto;
+  text-align: right;
 }
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

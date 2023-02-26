@@ -85,7 +85,7 @@ function NavControl() {
   const team = [{ name: "Loc" }, { name: "Tung" }, { name: "Tay" }]
   return (
     <Tabs
-      defaultActiveKey="Service"
+      defaultActiveKey="Staff"
       className="mb-3"
     >
       <Tab eventKey="Service" title="Service">
@@ -103,12 +103,8 @@ function NavControl() {
 function Header() {
   return (
     <div className="header">
-      <div></div>
       <div >
         <img className="logoMin" src="https://minpermanentbeauty.square.site/uploads/b/37786891d35eae97e0b4ced04b8dd6b701551979da9561e0b5e1de51b7f6ffee/New%20Logo%20Black%20Version%20(6)_1668575325.png?width=400"></img>
-      </div>
-      <div>
-        <input placeholder="search"></input>
       </div>
     </div>
   )
@@ -117,14 +113,14 @@ function Header() {
 
 function StaffMember({ member }) {
   return (
-    <div className="staff-card">
-      <div>
-        <h1>{member?.name}</h1>
-        <p>
+    <div className="d-flex justify-content-between align-self-center staff-card">
+      <div className="d-flex align-items-start flex-column">
+        <h1 className="mb-auto p-3">{member?.name}</h1>
+        <p className="mb-auto p-3">
           <button className="lik_bookme">Book me</button>
         </p>
       </div>
-      <div>
+      <div className="d-flex align-items-center">
         <img alt="staffimage" className="image-staff" src="https://us.123rf.com/450wm/praewpailin/praewpailin2009/praewpailin200900539/praewpailin200900539.jpg?ver=6g"></img>
       </div>
 
@@ -135,16 +131,18 @@ function StaffMember({ member }) {
 
 function Service() {
   return (
-    <div class="service-card">
+    <div className="service-card">
       <div>
         <span style={{ fontWeight: 'bold' }}>Service Name </span>
-        <p><a href="#" className="service_button">Book me</a></p>
       </div>
-      <div>
-        <text className="price_time"> $45.00 . 55 mins</text>
+        <div className="price_time">
+            <p> $45.00 * 55 mins </p>
+        </div>
+        <div>
+          <p><a href="#" className="service_button">Book me</a></p>
+        </div>
       </div>
-
-    </div>
   );
 }
+
 export default App;

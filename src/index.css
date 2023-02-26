@@ -59,21 +59,17 @@ code {
 }
 
 .staff-card{
-  display: flex;
-  justify-content: space-between;
   border: 1px solid gray;
-  padding: 20px;
-  border-radius: 5px;
   margin-bottom: 20px;
- 
+  
 }
 .image-staff{
   width: 120px;
 }
 
-.lik_bookme{
+/* .lik_bookme{
   text-decoration: none;
-}
+} */
 p{
   margin-top: 40px;
 }
