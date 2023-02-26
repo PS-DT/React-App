@@ -3,6 +3,10 @@ import "./App.css";
 import 'bootstrap/dist/css/bootstrap.css';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import useMediaQuery from 'react-media';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function App() {
 
@@ -18,6 +22,10 @@ function App() {
         <div >
           <NavControl />
         </div>
+
+        <div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55331.41859200201!2d-95.68279256874995!3d29.9157505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640d1110692ac69%3A0xdca2dc8d3ccd507d!2sIHOP!5e0!3m2!1sen!2sus!4v1677376059805!5m2!1sen!2sus" width={400} height={300} style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
       </div>
 
     </>
@@ -28,8 +36,30 @@ function App() {
 function Banner() {
   return (
     <>
-      <div className="d-flex banner justify-content-between flex-sm-nowrap flex-wrap">
-        <div className="">
+      <Container fluid>
+        <Row className="banner">
+          <Col sm={12} md={9}>
+            <p><b>Min's Lash & Fibroblasts</b></p>
+            <p>
+              Open until 7:00 pm
+              •<a href="tel: +1 346-204-2210" >  1 346-204-2210</a>
+              •<a href="%202beautieslash@gmail.com" >  +2beautieslash@gmail.com</a>
+            </p>
+            <p> At Min's Lash & Fibroblasts, we don’t strict the beauty in the same way. We prefer to bring out the best version of you instead. </p>
+          </Col>
+
+          <Col sm={12} md={3} className="banner-button">
+            <div>
+              <button className="book">Book</button>
+              <br></br>
+              <button className="bookings ">My bookings</button>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+      {/* <div className="d-flex banner justify-content-between flex-sm-nowrap flex-wrap"> */}
+      {/* <div className="banner">
+        <div className="col-9">
           <p><b>Min's Lash & Fibroblasts</b></p>
           <p>
             Open until 7:00 pm
@@ -38,13 +68,12 @@ function Banner() {
           </p>
           <p> At Min's Lash & Fibroblasts, we don’t strict the beauty in the same way. We prefer to bring out the best version of you instead. </p>
         </div>
-        <div className="banner-button">
-          <div>
-            <button className="book">Book</button>
+        <div className="col-3 banner-button">
+          <div><button className="book">Book</button>
             <br></br>
             <button className="bookings">My bookings</button></div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
@@ -98,7 +127,9 @@ function StaffMember({ member }) {
       <div>
         <img alt="staffimage" className="image-staff" src="https://us.123rf.com/450wm/praewpailin/praewpailin2009/praewpailin200900539/praewpailin200900539.jpg?ver=6g"></img>
       </div>
+
     </div>
+
   );
 }
 
