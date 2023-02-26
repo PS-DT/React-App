@@ -38,42 +38,26 @@ function Banner() {
     <>
       <Container fluid>
         <Row className="banner">
-          <Col sm={12} md={9}>
-            <p><b>Min's Lash & Fibroblasts</b></p>
-            <p>
-              Open until 7:00 pm
-              •<a href="tel: +1 346-204-2210" >  1 346-204-2210</a>
-              •<a href="%202beautieslash@gmail.com" >  +2beautieslash@gmail.com</a>
-            </p>
-            <p> At Min's Lash & Fibroblasts, we don’t strict the beauty in the same way. We prefer to bring out the best version of you instead. </p>
+          <Col sm={12} md={8} lg={9}>
+
+            <div>
+              <p style={{ fontSize: "30px", fontWeight: "500" }}>Min's Lash & Fibroblasts</p>
+              <p>
+                Open until 7:00 pm
+                •<a href="tel: +1 346-204-2210" >  1 346-204-2210</a>
+                •<a href="%202beautieslash@gmail.com" >  +2beautieslash@gmail.com</a>
+              </p>
+
+              <p> At Min's Lash & Fibroblasts, we don’t strict the beauty in the same way. We prefer to bring out the best version of you instead. </p>
+            </div>
           </Col>
 
-          <Col sm={12} md={3} className="banner-button">
-            <div>
-              <button className="book">Book</button>
-              <br></br>
-              <button className="bookings ">My bookings</button>
-            </div>
+          <Col sm={12} md={4} lg={3} className="banner-button">
+            <button className="book"  >Book</button>
+            <button className="bookings " >My bookings</button>
           </Col>
         </Row>
       </Container>
-      {/* <div className="d-flex banner justify-content-between flex-sm-nowrap flex-wrap"> */}
-      {/* <div className="banner">
-        <div className="col-9">
-          <p><b>Min's Lash & Fibroblasts</b></p>
-          <p>
-            Open until 7:00 pm
-            •<a href="tel: +1 346-204-2210" >  1 346-204-2210</a>
-            •<a href="%202beautieslash@gmail.com" >  +2beautieslash@gmail.com</a>
-          </p>
-          <p> At Min's Lash & Fibroblasts, we don’t strict the beauty in the same way. We prefer to bring out the best version of you instead. </p>
-        </div>
-        <div className="col-3 banner-button">
-          <div><button className="book">Book</button>
-            <br></br>
-            <button className="bookings">My bookings</button></div>
-        </div>
-      </div> */}
     </>
   );
 }
@@ -135,13 +119,13 @@ function Service() {
       <div>
         <span style={{ fontWeight: 'bold' }}>Service Name </span>
       </div>
-        <div className="price_time">
-            <p> $45.00 * 55 mins </p>
-        </div>
-        <div>
-          <p><a href="#" className="service_button">Book me</a></p>
-        </div>
+      <div className="price_time">
+        <p> $45.00 * 55 mins </p>
       </div>
+      <div>
+        <p><a href="#" className="service_button">Book me</a></p>
+      </div>
+    </div>
   );
 }
 
