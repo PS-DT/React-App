@@ -1,4 +1,6 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -23,21 +25,27 @@ code {
 }
 
 .banner{
-  padding-top: 5%;
+  padding-top: 20px;
 }
+
 .banner-button{
-  text-align: center;
-  display: inline-block;
-  height: 100%; 
-  vertical-align: middle;
+  padding-right : 0 !important;
+  padding-left : 0 !important;
+  text-align: end;
+}
+
+.statement.p{
+  font-size: 1rem;
+  padding-right: -10px;
 }
 
 .book{
   background-color: black;
   margin-bottom: 2px;
   color: white;
+  width: 100%;
   width: 240px;
-  padding: 10px;
+  padding: 0.75rem;
   font-size: 18px;
 }
 
@@ -46,7 +54,7 @@ code {
   margin-top: 2px;
   color: black;
   width: 240px;
-  padding: 10px;
+  padding: 0.75rem;
   font-size: 18px;
 }
 
@@ -64,4 +72,11 @@ code {
 } */
 p{
   margin-top: 40px;
+}
+
+@media screen and (max-width: 783px) {
+  .bookings , .book  {
+    display: block;
+    width: 100%;
+  }
 }
