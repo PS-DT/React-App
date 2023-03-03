@@ -8,6 +8,8 @@ import useMediaQuery from 'react-media';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import React, { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
 
 function App() {
 
@@ -17,11 +19,15 @@ function App() {
         <div>
           <Header />
         </div>
-        <div>
+      </div>
+      <div>
         <Alert variant="dark">
-          This is a addres of store
+          <div className="container">
+            This is a addres of store
+          </div>
         </Alert>
-        </div>
+      </div>
+      <div className="container">
         <div>
           {Banner()}
         </div>
@@ -30,7 +36,7 @@ function App() {
         </div>
 
         <div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55331.41859200201!2d-95.68279256874995!3d29.9157505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640d1110692ac69%3A0xdca2dc8d3ccd507d!2sIHOP!5e0!3m2!1sen!2sus!4v1677376059805!5m2!1sen!2sus" width={400} height={300} style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55331.41859200201!2d-95.68279256874995!3d29.9157505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640d1110692ac69%3A0xdca2dc8d3ccd507d!2sIHOP!5e0!3m2!1sen!2sus!4v1677376059805!5m2!1sen!2sus" width={400} height={300} style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
 
@@ -59,7 +65,7 @@ function Banner() {
           </Col>
 
           <Col sm={12} md={4} lg={3} className="banner-button">
-            <button className="book"  >Book</button>
+            <BookPopUp/>
             <button className="bookings " >My bookings</button>
           </Col>
         </Row>
@@ -135,4 +141,25 @@ function Service() {
   );
 }
 
+function BookPopUp(){
+  const [lgShow, setLgShow] = useState(false);
+  return (
+    <>
+    <button onClick={() => setLgShow(true)} className="book" >Book</button>
+      <Modal
+        size="lg"
+        show={lgShow}
+        onHide={() => setLgShow(false)}
+        aria-labelledby="example-modal-sizes-title-lg"
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="example-modal-sizes-title-lg">
+            Large Modal
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>bo gi vao day choi</Modal.Body>
+      </Modal>
+    </>
+  )
+}
 export default App;
