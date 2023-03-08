@@ -28,6 +28,11 @@ code {
   padding-top: 20px;
 }
 
+.banner div{
+  padding-right : 0 !important;
+  padding-left : 0 !important;
+}
+
 .banner-button{
   padding-right : 0 !important;
   padding-left : 0 !important;
