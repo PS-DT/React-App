@@ -86,6 +86,7 @@ function NavControl() {
       setData(response.data);
     });
   }, []);
+  console.log(team)
   return (
     <Tabs
       defaultActiveKey="Staff"
@@ -124,7 +125,7 @@ function StaffMember({ member }) {
         </p>
       </div>
       <div className="d-flex align-items-center">
-        <img alt="staffimage" className="image-staff" src="https://us.123rf.com/450wm/praewpailin/praewpailin2009/praewpailin200900539/praewpailin200900539.jpg?ver=6g"></img>
+        <img alt="staffimage" className="image-staff" src={member?.imgUrl}></img>
       </div>
 
     </div>
