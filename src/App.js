@@ -8,7 +8,8 @@ import useMediaQuery from 'react-media';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import Modal from 'react-bootstrap/Modal';
 
 function App() {
@@ -78,7 +79,13 @@ function Banner() {
 
 
 function NavControl() {
-  const team = [{ name: "Loc" }, { name: "Tung" }, { name: "Tay" }]
+  // const team = [{ name: "Loc" }, { name: "Tung" }, { name: "Tay" }]
+  const [team, setData] = useState([]);
+  useEffect(() => {
+    axios.get("http://localhost:3000/members").then((response) => {
+      setData(response.data);
+    });
+  }, []);
   return (
     <Tabs
       defaultActiveKey="Staff"
