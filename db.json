@@ -15,5 +15,8 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "members": [
+    { "name": "Loc" }, { "name": "Tung" }, { "name": "Tay" },{"name":"noname"}
+  ]
 }
