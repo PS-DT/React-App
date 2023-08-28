@@ -66,7 +66,7 @@ function Banner() {
           </Col>
 
           <Col sm={12} md={4} lg={3} className="banner-button">
-            <BookPopUp/>
+            <BookPopUp />
             <button className="bookings " >My bookings</button>
           </Col>
         </Row>
@@ -82,10 +82,12 @@ function NavControl() {
   // const team = [{ name: "Loc" }, { name: "Tung" }, { name: "Tay" }]
   const [team, setData] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:3000/members").then((response) => {
-      setData(response.data);
-    });
+    axios.get("http://localhost:5000/api/members", { crossdomain: true })
+      .then((response) => {
+        setData(response.data);
+      });
   }, []);
+
   console.log(team)
   return (
     <Tabs
@@ -93,12 +95,12 @@ function NavControl() {
       className="mb-3"
     >
       <Tab eventKey="Service" title="Service">
-        <Service />
+        {Service()}
       </Tab>
       <Tab eventKey="Staff" title="Staff">
-        {team.map((member, index) => (
-          <StaffMember key={index} member={member} />
-        ))}
+        {
+          team.map((member, index) => (<StaffMember key={index} member={member} />))
+        }
       </Tab>
     </Tabs>
   );
@@ -149,11 +151,11 @@ function Service() {
   );
 }
 
-function BookPopUp(){
+function BookPopUp() {
   const [lgShow, setLgShow] = useState(false);
   return (
     <>
-    <button onClick={() => setLgShow(true)} className="book" >Book</button>
+      <button onClick={() => setLgShow(true)} className="book" >Book</button>
       <Modal
         size="lg"
         show={lgShow}
